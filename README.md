@@ -18,14 +18,10 @@ Val2: +2ms
 Val3: +1ms
 
 Missing blocks:
-VAL1
-#####M#####
-VAL2
-#######M###
-VAL3
-#####M#M###
-VAL4
-#######M###
+VAL1 #####M#####
+VAL2 #######M###
+VAL3 #####M#M###
+VAL4 #######M###
 
 For N=2
 Output: (VAL1,VAL3),(VAL2,VAL3,VAL4)
@@ -38,10 +34,11 @@ NB: At first public key or hash will be displayed but ultimately we will use the
 # Inputs
 
  - START TIME: Beginning of the analysis period (either in block height or in time)
- - STOP TIME: End of the analysis period
- - N: Threshold number of blocks missing to be considered as a group of validators missing the same block
+ - STOP TIME: End of the analysis period // Will always be latest in the initial phase of the project
+ - N: Threshold number of common blocks missing to be considered as a group of validators missing the same block
 
 # Frameworks
 
-Golang
-Cosmos-SDK
+ - Golang
+ - Cosmos-SDK
+ - Cobra
